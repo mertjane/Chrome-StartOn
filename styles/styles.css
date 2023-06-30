@@ -1,0 +1,291 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "black";
+    src: url("../assets/fonts/Inter-Black.woff2") format('woff');
+}
+
+@font-face {
+    font-family: "bold";
+    src: url("../assets/fonts/Inter-Bold.woff2") format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "light";
+    src: url("../assets/fonts/Inter-LightBETA.woff2") format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "mediumBold";
+    src: url("../assets/fonts/Inter-Medium.woff2") format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "regular";
+    src: url("../assets/fonts/Inter-Regular.woff2") format('woff');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "semiBold";
+    src: url("../assets/fonts/Inter-SemiBold.woff2") format('woff');
+    font-weight: bold;
+}
+
+body {
+    font-family: "regular";
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url(../assets/pexels-mohamed-sarim-1033729.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.body-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 180px;
+    box-sizing: border-box;
+    position: relative;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        padding-top: 165px;
+    }
+}
+
+
+
+.header {
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 60px;
+}
+
+.forecast {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.city {
+    color: white;
+    font-size: 22px;
+}
+
+.temp {
+    color: white;
+    font-size: 34px;
+    font-family: "mediumBold";
+}
+
+.temp:hover {
+    opacity: 0.9;
+}
+
+
+
+.time {
+    color: #ffff;
+    font-size: 14rem;
+    z-index: 1;
+    font-weight: 400;
+    cursor: default;
+    user-select: none;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        font-size: 8rem;
+    }
+
+    /* For 1366 Resolution */
+    @media only screen and (min-width: 1030px) and (max-width: 1366px) {
+        font-size: 8rem;
+    }
+}
+
+.greeting {
+    color: #ffff;
+    letter-spacing: -3px;
+    font-size: 4.5rem;
+    z-index: 1;
+    font-weight: 400;
+    margin: 14px 0;
+    cursor: default;
+    user-select: none;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        font-size: 3rem;
+    }
+
+    @media only screen and (min-width: 1030px) and (max-width: 1366px) {
+        font-size: 3.5rem;
+    }
+}
+
+.form {
+    z-index: 1;
+    width: 54.5%;
+    height: auto;
+    margin: 14px 0;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        width: 64.5%;
+    }
+
+    @media only screen and (min-width: 1030px) and (max-width: 1366px) {
+        width: 64.5%;
+    }
+}
+
+input {
+    width: 100%;
+    height: 85px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: none;
+    outline: none;
+    padding-left: 40px;
+    font-size: 30px;
+    color: #ffff;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        font-size: 26px;
+    }
+}
+
+input::placeholder {
+    opacity: 0.7;
+    color: #ffff;
+}
+
+.shortcut-box {
+    z-index: 1;
+    width: 60%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        justify-content: space-between;
+    }
+
+    @media only screen and (min-width: 1030px) and (max-width: 1366px) {
+        justify-content: space-between;
+    }
+}
+
+.ico0,
+.ico1,
+.ico2,
+.ico3,
+.ico4,
+.ico5,
+.ico6 {
+    border-radius: 6px;
+    width: 50px;
+    height: 50px;
+
+    @media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+        width: 40px;
+        height: 40px;
+    }
+
+    @media only screen and (min-width: 1030px) and (max-width: 1366px) {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+.ico0:hover,
+.ico1:hover,
+.ico2:hover,
+.ico3:hover,
+.ico4:hover,
+.ico5:hover,
+.ico6:hover {
+    transform: scale(1.5) perspective(1px);
+    transition: all 350ms ease;
+}
+
+.ico3 {
+    background-color: #dddd;
+}
+
+.ico5 {
+    padding: 12px;
+    background-color: #dddd;
+}
+
+
+.footer-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff60;
+    position: absolute;
+    bottom: 0;
+    padding: 14px 0;
+}
+
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    right: 120px;
+    top: 20px;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    max-height: 400px;
+    overflow-y: scroll;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display: block;
+}
